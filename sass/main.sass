@@ -1,0 +1,451 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+ul
+	margin: 0
+	padding: 0
+.show
+	display: block
+	opacity: 1
+	transform: translateX(-100%)
+	transition: all .7s ease-in-out
+	overflow: hidden
+body
+	font-size: 16px
+	min-width: 320px
+	width: 100%
+	margin: 0 auto
+	background-color: #fff
+	position: relative
+	color: #fff
+	line-height: 1.55
+	font-family: 'LatoRegular'
+	overflow-x: hidden
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	div#preloader
+		position: fixed
+		left: 0
+		top: 0
+		z-index: 3000
+		width: 100%
+		height: 100%
+		overflow: visible
+		background: #333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.text-center
+	text-align: center
+.wrapp
+	width: 60vw
+	margin: 0 auto
+header.header
+	animation-name: slideshow
+	animation-duration: 10s
+	animation-iteration-count: infinite
+	backface-visibility: hidden
+	overflow: hidden
+	width: 100%
+	height: 100vh
+	.top-line
+		disolay: block
+		padding-top: 40px
+		margin-bottom: 60px
+		width: 100vw
+		height: 100px
+		transition: all .5s ease
+	.logo
+		left: 5%
+		top: 20px
+		display: block
+		position: absolute
+		z-index: 100
+		a
+			position: relative
+			cursor: pointer
+			width: 50px
+			height: auto
+			display: block
+			#svg
+				width: 100%
+				
+			
+
+.menu-button
+	position: absolute
+	right: 30px
+	top: 20px
+	display: none
+	cursor: pointer
+	.button
+		width: 50px
+		#menu
+			fill: #fff
+
+
+ul.menu
+	li
+		list-style-type: none
+		display: inline-block
+		position: relative
+		i
+			position: relative
+			color: #fff
+
+		i::after 
+			content: ''
+			position: absolute
+			top: 7px
+			left: 7px
+			border: 3px solid transparent
+			border-top: 3px solid #fff
+		a
+			font-family: "LatoBold"
+			color: #fff
+			font-size: 15px
+			padding: 0 10px
+			margin-right: 47px
+			text-transform: capitalize
+			text-decoration: none
+			&:first-child
+				padding-left: 0
+		&:hover
+			>ul
+				opacity: 1
+				transition: .7s
+				a
+					display: block
+					padding: 0 0 0 10px
+					border: 1px solid #fff
+					background-color: #0bb
+
+			&:hover
+				i
+					position: relative
+				 	color: #fff
+
+				i::after 
+					content: ''
+					position: absolute
+					top: 3px
+					left: 7px
+					border: 3px solid transparent
+					border-bottom: 3px solid #fff	
+.slider-content	
+	position: absolute
+	top: 160px
+	overflow: hidden
+.title-slider
+	font-size: 52px
+	font-family: "LatoLight"
+	line-height: 62px
+	max-width: 401px
+.slider-description
+	color: #fff
+	max-width: 401px
+	line-height: 25px
+	font-size: 14px
+.line-decor-for-header
+	height: 48px
+	width: 100%
+	position: relative
+	background-color: rgba(255,255,255, .5) 
+	opacity: 1
+	position: absolute
+	bottom: -7px
+	left: 0
+	transform: rotate(0.3deg)
+	&::after
+		content: "fdff"
+		width: 100%
+		height: 50px
+		background-color: #fff
+		color: #fff
+		z-index: 100
+		top: 22px
+		left: -2px
+		opacity: 1
+		position: absolute
+		transform: rotate(1deg)
+.content-carousel
+	overflow: hidden
+	padding-top: 120px
+	padding-bottom: 105px
+	background-color: #fff
+	.carousel
+		display: block
+		.slide
+			display: flex
+			.left-section
+				color: #000
+				width: 30%
+				flex: 1
+				.desc-text
+					font-size: 20px
+					line-height: 28px
+					max-width: 265px
+					font-family: "LatoItalic"
+					color: #fe992a
+					position: relative
+					&::after
+						content: "	\201e"
+						font-size: 48px
+						line-height: 28px
+						position: absolute
+						color: #fe992a
+						bottom: -10px
+
+					&::before
+						content: "\201c"
+						font-size: 48px
+						line-height: 28px
+						color: #fe992a
+						position: absolute
+						top: -20px
+			.right-section
+				color: #000
+				padding-left: 100px
+				flex: 1.5
+				.title-section
+					font-size: 24px
+					line-height: 24px
+					color: #fe992a
+					font-family: "LatoRegular"
+				.text-section
+					color: #737c85
+					font-size: 14px
+					line-height: 28px
+					font-family: Arial
+.slick-arrow
+	background-color: #bbb
+	position: absolute
+	border: none
+.slick-prev
+	position: absolute
+	left: 26%
+	top: 90%
+	width: 20px
+	content: ""
+
+.slick-next
+	position: absolute
+	width: 20px
+	left: 32%
+	top: 90%
+	content: ""
+footer.footer
+	background-color: #e56c69
+	padding: 50px 0
+	height: auto
+.flex-container
+	display: flex
+.address-information
+	flex: 1
+	p
+		padding: 0
+		margin: 0
+		font-size: 12px
+		line-height: 24px
+		font-family: "DroidSansRegular"
+		i
+			margin-right: 10px
+	p.address
+		font-family: "DroidSansBold"
+		margin-top: 35px
+.site-map
+	flex: 2
+	.footer-menu
+		display: flex
+		align-items: space-justify
+		li
+			list-style-type: none
+			margin: 0 auto
+			font-size: 12px
+			line-height: 24px
+			font-family: "DroidSansBold"
+			ul
+				li	
+					a
+						display: inline-block
+						text-decoration: none
+						color: #fff
+						font-size: 12px
+						line-height: 24px
+						font-family: "DroidSansRegular"
+
+.top-line.fixed-menu
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	background-color: #e56c69
+	height: 100px
+	z-index: 2000
+
+	div.wrapp
+		margin: 0 auto
+	nav.menu
+		ul
+
+@keyframes slideshow
+	0%
+		background-origin: content-box
+		background-position: 0 0
+		background-size: cover
+		background-repeat: no-repeat
+		background-image: url(../img/smoothie.jpg)
+	50%
+		background-origin: content-box
+		background-position: 0 0
+		background-size: cover
+		background-repeat: no-repeat
+		background-image: url(../img/bg.jpg)
+	100%
+		background-origin: content-box
+		background-position: 0 0
+		background-size: cover
+		background-repeat: no-repeat
+		background-image: url(../img/smoothie.jpg)
+
+
+
+.category
+	display: flex
+	justify-content: space-around
+	flex-direction: column
+	.content
+		margin: 10px 0
+		padding: 30px
+		flex: 3
+		display: flex
+		justify-content: space-between
+		background-color: red
+		div.title-cat
+			margin-right: 10px
+			flex: 3
+		.image
+			img
+				flex: 1
+				width: 10px
+				height: 10px
+.list
+	overflow: hidden
+	height: 0
+	background-color: #bbb
+	transition: all 1s ease
+	ul
+		li
+			list-style-type: none
+			padding: 4px
+			margin-left: 20px
+			display: block
+
+.list.showin
+	overflow: visible
+	height: auto
+	transition: all 1s ease
+.filter-box
+	background-color: #bbb
+	height: auto
+	width: 100%
+	border-radius: 5px
+	margin-top: 20px
+	.title-filter
+		display: flex
+		height: 10vw
+		align-items: center
+		justify-content: center
+		flex-direction: column
+	.content-filter
+		ul	
+			flex-wrap: nowrap
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: row
+			li
+				list-style-type: none
+				label
+					display: flex
+					align-items: center
+					width: 5vmax
+					height: 5vmax
+					border-radius: 50%
+					cursor: pointer
+					overflow: hidden
+					justify-content: center
+				input
+					display: none
+					z-index: 2
+.slider
+	margin-top: 30px
+	display: flex
+	align-items: center
+	flex-direction: column
+	justify-content: center
+	padding: 2vmax
+	height: 20vh
+	width: 30%
+	background-color: #bbb
+	z-index: 5
+	color: #000
+	div
+		background-color: #fff
+		color: #000
+		width: 100%
+		z-index: 10
+span .ui-state-default
+	color: red
+	background: red
+.price-box
+	color: #000
+	margin-top: 20%
+.works
+	color: #000
+.container-works
+	display: flex
+	justify-content: space-around
+	align-items: center
+	flex-wrap: wrap
+	div
+		width: 30%
+		height: 200px
+		background-color: #bbb
+		margin: 15px 0
+		img
+			width: 100%
+			height: 100%
+			dsplay: block
+.wb
+	width: 100%
+	height: auto
+	display: block
+	cursor: pointer
+	text-align: center
+	background-color: red
+	margin-bottom: 10px
+	button
+		background-color: #cdc
+		width: 100%
+		height: 40px
+		color: #000
+		border: none
+
+@import "media" // Always at the end

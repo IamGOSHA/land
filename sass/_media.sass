@@ -1,0 +1,99 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+	ul.menu
+		li
+			a
+				padding: 0 10px
+				margin-right: 35px
+	footer.footer
+		.flex-container
+			flex-direction: column-reverse
+			.address-information
+				display: flex
+				margin-top: 2vmax
+				justify-content: space-around
+				flex-direction: row
+		.flex-container.wrapp
+			width: 100%
+			padding: 10px
+	.content-carousel
+		overflow: hidden
+		padding-top: 50px
+		padding-bottom: 50px
+		background-color: #fff
+		.carousel
+			.slide
+				display: flex
+				flex-direction: column
+				justify-content: flex-start
+				.left-section
+					width: 100%
+					margin-bottom: 5vh
+					.desc-text
+						max-width: 100%
+						margin: 
+				.right-section
+					width: 100%
+					padding: 0
+					.title-section
+						line-height: 30px
+//Medium: ≥768px
++media-breakpoint-down(md)
+	ul.menu
+		li
+			a
+				padding: 0 10px
+				margin-right: 9px
+//Small: ≥576px
++media-breakpoint-down(sm)
+	.menu-button
+		display: block
+		transition: all .5s ease
+	ul.menu
+		position: fixed
+		left: 100%
+		bottom: 50%
+		width: 35vmax
+		transition: all .7s ease-in-out
+		z-index: 100
+		li
+			display: block
+			border-bottom: 1px solid rgba(255,255,255,.5)
+			padding: 5px 10px
+
+			background-color: rgba(0,0,0,.5)
+			margin: 0 0 0 10px
+			a
+				padding: 5px 30px
+				text-indent: 3px
+				display: block
+
+//Extra small: >0
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)
